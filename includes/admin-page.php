@@ -29,7 +29,7 @@ function pvc_render_admin_page() {
 
     echo '<div class="wrap"><h1>Post View Count</h1>';
 
-    // Dropdown form
+    
     echo '<form method="post">';
     echo '<label for="pvc_selected_page"><strong>Select a page/post:</strong></label><br>';
     echo '<select name="pvc_selected_page" id="pvc_selected_page">';
@@ -41,7 +41,7 @@ function pvc_render_admin_page() {
     echo '</select> <input type="submit" class="button button-primary" value="View">';
     echo '</form><br>';
 
-    // Show logs
+   
     if ($selected_page) {
         $results = $wpdb->get_results($wpdb->prepare(
             "SELECT * FROM $table_name WHERE post_id = %d ORDER BY view_date DESC",
@@ -53,7 +53,6 @@ function pvc_render_admin_page() {
             $page_info = get_post($selected_page);
             echo '<h2>Total Views: ' . $view_count . '</h2>';
 
-            // Group by user_name and count
             $grouped = [];
             foreach ($results as $row) {
                 $key = $row->user_name . '|' . $row->is_logged_in;
@@ -72,7 +71,7 @@ function pvc_render_admin_page() {
                 }
             }
 
-            // Show table
+            
             echo '<table class="widefat fixed striped"><thead><tr>
                 <th>Post ID</th>
                 <th>Title</th>

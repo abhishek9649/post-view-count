@@ -9,11 +9,9 @@
 
 if (!defined('ABSPATH')) exit;
 
-// Include files
 require_once plugin_dir_path(__FILE__) . 'includes/tracker.php';
 require_once plugin_dir_path(__FILE__) . 'includes/admin-page.php';
 
-// Create custom DB table on activation
 register_activation_hook(__FILE__, 'pvc_create_table');
 
 function pvc_create_table() {
@@ -32,7 +30,7 @@ function pvc_create_table() {
         view_date DATETIME DEFAULT CURRENT_TIMESTAMP,
         PRIMARY KEY (id)
     ) $charset_collate;";
-    
+
 
     require_once ABSPATH . 'wp-admin/includes/upgrade.php';
     dbDelta($sql);
