@@ -13,6 +13,8 @@ function pvc_add_admin_menu() {
     );
 }
 
+
+
 function pvc_render_admin_page() {
     global $wpdb;
     $table_name = $wpdb->prefix . 'post_view_count';

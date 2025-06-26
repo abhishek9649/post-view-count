@@ -9,7 +9,8 @@ function pvc_track_post_view() {
 
     if (!isset($post->ID)) return;
 
-    // Ensure selected posts option is an array of integers
+    // Ensure selected posts option is an array of integers    
+    
     $selected_posts = get_option('pvc_selected_posts', []);
     $selected_posts = array_map('intval', (array)$selected_posts);
 
