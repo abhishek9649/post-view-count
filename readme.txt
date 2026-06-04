@@ -1,5 +1,5 @@
 === Post View Count ===
-Contributors: Robust Decoders  
+Contributors: Abhishek sharma   
 Tags: post views, page views, track views, user tracking, post statistics  
 Requires at least: 5.0  
 Tested up to: 6.5  
