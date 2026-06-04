@@ -3,7 +3,7 @@
  * Plugin Name: Post View Count
  * Description: Tracks selected page/post views with user details.
  * Version: 1.0.0
- * Author: Robust Decoders  
+ * Author: Abhishek sharma   
  * License: GPLv2 or later
  */
 
